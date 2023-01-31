@@ -13,7 +13,8 @@ export default function Balances(props: {slug: string}) {
         setIncomingBalance(res.balances.incoming_balance_cents);
     })
     return (
-        <table>
+        // @ts-expect-error
+        <table border={1}>
             <thead>
                 <tr>
                     <th>Balance</th>
