@@ -11,6 +11,7 @@ export default function Transactions(props: {slug: string}) {
         <table border={1}>
             <thead>
                 <tr>
+                    <th>Type</th>
                     <th>Memo</th>
                     <th>Date</th>
                     <th>Pending</th>
@@ -20,6 +21,7 @@ export default function Transactions(props: {slug: string}) {
             <tbody>
                 <For each={transactions()}>{(transaction, i) => 
                     <tr>
+                        <td>{transaction.type}</td>
                         <td>{transaction.memo}</td>
                         <td>{transaction.date}</td>
                         <td>{String(transaction.pending)}</td>
