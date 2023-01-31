@@ -12,6 +12,7 @@
     "postcss": "^8.4.21",
     "sass": "^1.57.1",
     "solid-start-node": "^0.2.15",
+    "solid-start-vercel": "^0.2.17",
     "typescript": "^4.9.4",
     "vite": "^3.2.5"
   },
