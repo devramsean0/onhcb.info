@@ -27,6 +27,7 @@ export default function Root() {
               <FileRoutes />
             </Routes>
           </ErrorBoundary>
+          <Footer/>
         </Suspense>
         <Scripts />
       </Body>

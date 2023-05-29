@@ -13,22 +13,24 @@ export default function Balances(props: {slug: string}) {
         setIncomingBalance(res.balances.incoming_balance_cents);
     })
     return (
-        // @ts-expect-error
-        <table border={1}>
-            <thead>
-                <tr>
-                    <th>Balance</th>
-                    <th>Fee</th>
-                    <th>Incoming Balance</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{`$${Number(balance()) / 100}`}</td>
-                    <td>{`$${Number(feesBalance()) / 100}`}</td>
-                    <td>{`$${Number(incomingBalance()) / 100}`}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="div4">
+            {/* @ts-expect-error */}
+            <table border={1}>
+                <thead>
+                    <tr>
+                        <th>Balance</th>
+                        <th>Fee</th>
+                        <th>Incoming Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{`$${Number(balance()) / 100}`}</td>
+                        <td>{`$${Number(feesBalance()) / 100}`}</td>
+                        <td>{`$${Number(incomingBalance()) / 100}`}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     )
 }

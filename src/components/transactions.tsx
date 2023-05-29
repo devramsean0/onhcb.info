@@ -7,29 +7,31 @@ export default function Transactions(props: {slug: string}) {
         setTransactions(res)
     })
     return (
-        // @ts-expect-error
-        <table border={1}>
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Memo</th>
-                    <th>Date</th>
-                    <th>Pending</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <For each={transactions()}>{(transaction, i) => 
+        <div class="div5">
+            {/* @ts-expect-error */}
+            <table border={1}>
+                <thead>
                     <tr>
-                        <td>{transaction.type}</td>
-                        <td>{transaction.memo}</td>
-                        <td>{transaction.date}</td>
-                        <td>{String(transaction.pending)}</td>
-                        <td>{transaction.amount_cents}</td>
+                        <th>Type</th>
+                        <th>Memo</th>
+                        <th>Date</th>
+                        <th>Pending</th>
+                        <th>Amount</th>
                     </tr>
-                }
-                </For>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <For each={transactions()}>{(transaction, i) => 
+                        <tr>
+                            <td>{transaction.type}</td>
+                            <td>{transaction.memo}</td>
+                            <td>{transaction.date}</td>
+                            <td>{String(transaction.pending)}</td>
+                            <td>{transaction.amount_cents}</td>
+                        </tr>
+                    }
+                    </For>
+                </tbody>
+            </table>
+        </div>
     )
 }
