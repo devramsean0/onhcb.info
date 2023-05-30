@@ -7,11 +7,14 @@ import { HCBStatic } from "@/lib/hcb_static";
 
 export function TransactionsTable(props: {transactions: HCB_Transaction[], orgSlug: string}) {
     const [transactions, setTransactions] = useState(props.transactions)
-    const [transactionPageOffset, setTransactionPageOffset] = useState(0)
+    const [transactionPageOffset, setTransactionPageOffset] = useState(2)
+    console.log("Transaction page offset: ", transactionPageOffset)
     // Expand more records hook
     const loadMoreRecords = async () => {
         setTransactionPageOffset(transactionPageOffset + 1)
+        console.log("Transaction page offset: ", transactionPageOffset)
         const moreTransactions = await fetch<HCB_Transaction[]>(`https://bank.hackclub.com/api/v3/organizations/${props.orgSlug}/transactions?per_page=${HCBStatic.TRANSACTIONS_PER_PAGE}&page=${transactionPageOffset}`);
+        console.log("Transaction page offset: ", transactionPageOffset)
         const updatedTransactions = transactions.concat(moreTransactions);
         // Logging
         console.log("Transactions: ", transactions.length)
