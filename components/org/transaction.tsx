@@ -23,7 +23,7 @@ export function Transaction(props: {transaction: HCB_Transaction}) {
                     <center>{props.transaction.date}</center>
                 </td>
                 <td>
-                    <center>{props.transaction.type}</center>
+                    <center>{props.transaction.type.replaceAll("_", " ")}</center>
                 </td>
             </tr>
         )
