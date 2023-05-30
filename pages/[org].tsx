@@ -8,6 +8,7 @@ import { DemoMode } from "@/components/org/demo";
 import { TransactionsTable } from "@/components/org/transactionsTable";
 import { HCBStatic } from "@/lib/hcb_static";
 import { Balance } from "@/components/org/balance";
+import { Footer } from "@/components/footer";
 
 export default function OrgPage(params: { orgData: HCB_Org, transactions: HCB_Transaction[] }) {
     if (!params.orgData.id) {
@@ -16,6 +17,7 @@ export default function OrgPage(params: { orgData: HCB_Org, transactions: HCB_Tr
                 <Navbar />
                 <h1>Experienced an error while fetching</h1>
                 <pre>{params.orgData.message}</pre>
+                <Footer />
             </>
         )
     } else {
@@ -34,6 +36,7 @@ export default function OrgPage(params: { orgData: HCB_Org, transactions: HCB_Tr
                 <Card variant="sunken">
                     <TransactionsTable transactions={params.transactions} orgSlug={params.orgData.slug}/>
                 </Card>
+                <Footer />
             </>
         )
     }
