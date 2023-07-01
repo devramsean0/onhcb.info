@@ -9,6 +9,7 @@ import { TransactionsTable } from "@/components/org/transactionsTable";
 import { HCBStatic } from "@/lib/hcb_static";
 import { Balance } from "@/components/org/balance";
 import { Footer } from "@/components/footer";
+import { HCB } from "hcb.js";
 
 export default function OrgPage(params: { orgData: HCB_Org, transactions: HCB_Transaction[] }) {
     if (!params.orgData.id) {
@@ -42,9 +43,12 @@ export default function OrgPage(params: { orgData: HCB_Org, transactions: HCB_Tr
     }
 }
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+    const hcb = new HCB();
     const org = ctx.params?.org;
-    const orgData = await fetch<HCB_Org>(`https://bank.hackclub.com/api/v3/organizations/${org}`);
-    const transactions = await fetch<HCB_Transaction[]>(`https://bank.hackclub.com/api/v3/organizations/${org}/transactions?per_page=${HCBStatic.TRANSACTIONS_PER_PAGE}`);
+    const orgData = await hcb.organization.singleOrganization({ id: String(org)})
+    //const orgData = await fetch<HCB_Org>(`https://bank.hackclub.com/api/v3/organizations/${org}`);
+    //const transactions = await fetch<HCB_Transaction[]>(`https://bank.hackclub.com/api/v3/organizations/${org}/transactions?per_page=${HCBStatic.TRANSACTIONS_PER_PAGE}`);
+    const transactions = await hcb.transaction.allOrgTransactions({ id: String(org), per_page: HCBStatic.TRANSACTIONS_PER_PAGE });
     const transactionsSorted = transactions.sort((a: any ,b: any) => {
         const aDate = new Date(a.date).getTime();
         const bDate = new Date(b.date).getTime();
