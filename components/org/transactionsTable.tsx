@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button, Grid } from "theme-ui";
 import { fetch } from "@sapphire/fetch";
 import { HCBStatic } from "@/lib/hcb_static";
+import { HCB } from "hcb.js";
 
 export function TransactionsTable(props: {transactions: HCB_Transaction[], orgSlug: string}) {
     const [transactions, setTransactions] = useState(props.transactions)
@@ -13,7 +14,9 @@ export function TransactionsTable(props: {transactions: HCB_Transaction[], orgSl
     const loadMoreRecords = async () => {
         setTransactionPageOffset(transactionPageOffset + 1)
         console.log("Transaction page offset: ", transactionPageOffset)
-        const moreTransactions = await fetch<HCB_Transaction[]>(`https://bank.hackclub.com/api/v3/organizations/${props.orgSlug}/transactions?per_page=${HCBStatic.TRANSACTIONS_PER_PAGE}&page=${transactionPageOffset}`);
+        //const moreTransactions = await fetch<HCB_Transaction[]>(`https://bank.hackclub.com/api/v3/organizations/${props.orgSlug}/transactions?per_page=${HCBStatic.TRANSACTIONS_PER_PAGE}&page=${transactionPageOffset}`);
+        const hcb = new HCB();
+        const moreTransactions = await hcb.transaction.allOrgTransactions({id: props.orgSlug, offset: HCBStatic.TRANSACTIONS_PER_PAGE, page: transactionPageOffset});
         console.log("Transaction page offset: ", transactionPageOffset)
         const updatedTransactions = transactions.concat(moreTransactions);
         // Logging
