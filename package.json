@@ -9,21 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
-    "@hackclub/icons": "^0.0.12",
+    "@hackclub/icons": "^0.0.14",
     "@hackclub/theme": "^0.3.3",
-    "@sapphire/fetch": "^2.4.1",
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.15",
-    "@types/react-dom": "18.2.7",
-    "hcb.js": "^0.3.2",
+    "@sapphire/fetch": "^2.4.2",
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.22",
+    "hcb.js": "^0.4.4",
     "next": "13.4.10",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.64.0",
-    "theme-ui": "^0.16.0",
-    "typescript": "5.1.6"
+    "sass": "^1.72.0",
+    "theme-ui": "^0.16.2",
+    "typescript": "5.4.3"
   }
 }
