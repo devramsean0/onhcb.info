@@ -242,6 +242,11 @@
   dependencies:
     cross-fetch "^3.1.5"
 
+"@sapphire/fetch@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@sapphire/fetch/-/fetch-3.0.3.tgz#de3ccdbfb3a25b2d1103363b33ea0704e54aca69"
+  integrity sha512-oGfffX3vfO79PnIUKrxwhU7sTT11CRGdQVzEyfL4TqSiZaULJVtCns3PYA2lg+8FkPv7gQYzwB1FpA4bNS4jnQ==
+
 "@styled-system/background@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@styled-system/background/-/background-5.1.2.tgz#75c63d06b497ab372b70186c0bf608d62847a2ba"
