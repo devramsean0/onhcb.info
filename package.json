@@ -14,7 +14,7 @@
     "@hackclub/icons": "^0.0.12",
     "@hackclub/theme": "^0.3.3",
     "@sapphire/fetch": "^2.4.1",
-    "@types/node": "20.4.2",
+    "@types/node": "22.18.12",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "hcb.js": "^0.3.2",
