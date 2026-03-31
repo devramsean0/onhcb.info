@@ -12,7 +12,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hackclub/icons": "^0.0.12",
-    "@hackclub/theme": "^0.3.3",
+    "@hackclub/theme": "^1.1.0",
     "@sapphire/fetch": "^2.4.1",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
