@@ -401,10 +401,12 @@
     "@theme-ui/core" "^0.16.0"
     "@theme-ui/css" "^0.16.0"
 
-"@types/node@20.4.2":
-  version "20.4.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.2.tgz#129cc9ae69f93824f92fac653eebfb4812ab4af9"
-  integrity sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==
+"@types/node@24.13.3":
+  version "24.13.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.13.3.tgz#49f18bd3c647866dcda51a0756c145e14590ce16"
+  integrity sha512-Dh8vAsV36ig5wa9OX4pXvMc9D3Veibfw2wix0CUwYODLD8nkj9UsLjASr49nPg+2eKzxhBV+v7L8pXvT4e639Q==
+  dependencies:
+    undici-types "~7.18.0"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -983,6 +985,11 @@ typescript@5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.6.tgz#02f8ac202b6dad2c0dd5e0913745b47a37998274"
   integrity sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==
+
+undici-types@~7.18.0:
+  version "7.18.2"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.18.2.tgz#29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9"
+  integrity sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==
 
 watchpack@2.4.0:
   version "2.4.0"
